@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Revengers - Flashcards</title>
+    <style>
+        /* ========================================================
+           CÓDIGO CSS (Tema Black & Gold - Tokyo Revengers)
+           ======================================================== */
+        
+        /* Configuração do fundo e rolagem */
+        body {
+            background-color: #0d0d0d; /* Preto profundo */
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Grid para organizar os 5 cards de forma responsiva */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Container da perspectiva 3D */
+        .flashcard-container {
+            perspective: 1000px;
+            height: 220px; /* Altura definida para o container */
+        }
+
+        /* O card que gira */
+        .flashcard {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        /* Giro ao passar o mouse */
+        .flashcard-container:hover .flashcard {
+            transform: rotateY(180deg);
+        }
+
+        /* Base para as duas faces do card */
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            padding: 25px;
+            box-sizing: border-box;
+            text-align: center;
+            border: 2px solid #d4af37; /* Borda Dourada */
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Brilho dourado sutil */
+        }
+
+        /* Customização da Frente (Preto com detalhes dourados) */
+        .card-front {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .card-front h2 {
+            color: #d4af37; /* Título Dourado */
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-front p {
+            font-size: 1rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .hint {
+            font-size: 0.75rem;
+            color: #8a8a8a;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Customização do Verso (Dourado com detalhes pretos) */
+        .card-back {
+            background-color: #d4af37; /* Fundo Dourado */
+            color: #0d0d0d; /* Texto Preto */
+            transform: rotateY(180deg);
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .card-back h2 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        .card-back p {
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="card-face card-front">
+                    <h2>Pergunta 1</h2>
+                    <p>Qual é o nome do protagonista que viaja no tempo?</p>
+                    <span class="hint">Passe o mouse para revelar</span>
+                </div>
+                <div class="card-face card-back">
+                    <h2>Resposta</h2>
+                    <p>Takemichi Hanagaki</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="card-face card-front">
+                    <h2>Pergunta 2</h2>
+                    <p>Quem é o líder e fundador da Tokyo Manji (Toman)?</p>
+                    <span class="hint">Passe o mouse para revelar</span>
+                </div>
+                <div class="card-face card-back">
+                    <h2>Resposta</h2>
+                    <p>Manjiro Sano (Mikey Invencível)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="card-face card-front">
+                    <h2>Pergunta 3</h2>
+                    <p>Qual objeto ou ação engatilha a viagem no tempo de Takemichi?</p>
+                    <span class="hint">Passe o mouse para revelar</span>
+                </div>
+                <div class="card-face card-back">
+                    <h2>Resposta</h2>
+                    <p>Um aperto de mãos com Naoto Tachibana</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="card-face card-front">
+                    <h2>Pergunta 4</h2>
+                    <p>Quem é o vice-líder da Toman e melhor amigo do Mikey?</p>
+                    <span class="hint">Passe o mouse para revelar</span>
+                </div>
+                <div class="card-face card-back">
+                    <h2>Resposta</h2>
+                    <p>Ken Ryuguji (Draken)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="card-face card-front">
+                    <h2>Pergunta 5</h2>
+                    <p>Qual é o nome da namorada de Takemichi que ele tenta salvar no passado?</p>
+                    <span class="hint">Passe o mouse para revelar</span>
+                </div>
+                <div class="card-face card-back">
+                    <h2>Resposta</h2>
+                    <p>Hinata Tachibana</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
